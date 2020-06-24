@@ -1,0 +1,285 @@
+* , 
+*::before, 
+* ::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 100px;
+    height: 20px;
+    background-color: #ffeedc;
+    display: flex;
+   justify-content: space-between;
+}
+
+:root {
+    --primary-color: white;
+    --secondary-color: rgba(26, 26, 26, 0.7); 
+    --bowshadow: 5px 5px 10px;
+    --size-text: 1.8em;
+    --size-title: 2.2em
+}
+
+
+h2::first-letter {
+    font-size: var(--size-title);
+}
+
+/* header menu */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 15vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--secondary-color);
+    z-index: 100;
+    }
+
+header h2 {
+    align-self: center;
+    font-size: var(--size-title);
+    color: var(--primary-color);
+}
+
+nav {
+    width: 40%;
+    display: block;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 1.5em;
+    transition: all 300ms ease-in-out;
+}
+
+nav a:hover {
+    text-decoration: overline;
+    color: lightsalmon;
+}
+
+/* quote section */
+
+.quote-judo {
+    height: 15%;
+    margin-top: 50px;
+}
+
+/* founder section */
+
+.founder-judo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(135, 142, 150);
+    height: 150px;
+    padding: 20px;
+}
+
+.founder-judo .founder {
+    text-align: center;
+    line-height: 3em;
+    
+}
+
+.founder-judo .founder-noun {
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.founder-judo .founder-history {
+    font-size: var(--size-text);
+    text-align: justify;
+} 
+
+/* history section */
+
+.history-judo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(189, 210, 231);
+    height: 150px;
+    padding: 20px;
+}
+
+.history-judo .definition {
+    text-align: center;
+    line-height: 3em;
+    
+}
+
+.history-judo .definition-title {
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.history-judo .definition-history {
+    font-size: var(--size-text);
+    text-align: justify;
+}
+
+/* legends section */
+
+.legend-judo {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
+    grid-template-rows: 350px;
+}
+
+.legend-judo  img {
+    width: 300px;
+    height: 300px;
+}
+
+.legend-judo .athlete:nth-child(odd) {
+   background-color: rgb(100, 153, 116);
+}
+
+ .athlete {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: minmax(100px, auto);
+ }
+
+ .athlete img {
+    width: 300px;
+    height: 300px;
+    justify-items: center;
+ }
+
+ .from-left {
+    transform: translateX(-120px);
+ }
+ 
+ .from-right {
+    transform: translateX(+120px);
+ }
+
+ .from-right,
+ .from-left {
+    opacity: 0;
+    transition: all 500ms ease-in 600ms;
+ }
+
+ .from-right.appear,
+ .from-left.appear {
+    opacity: 1;
+    transform: translateX(0);
+ }
+
+ .athlete-definition {
+    margin: 50px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    
+ }
+ .athlete-title {
+    font-size: var(--size-title);
+ }
+ .athlete-paragraphe {
+    font-size: var(--size-text);  
+ }
+
+
+ /* best section */
+
+ .best-judo img {
+    width: 300px;
+    height: 300px;
+ }
+
+ .best-judo .ethics-best-judo {
+     text-align: center;
+     margin-bottom: 50px;
+ }
+
+ .best-judo .ethic-block {
+     display: flex;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+   
+ }
+
+ .ethics {
+     border: 2px solid var(--secondary-color);
+     border-radius: 8px;
+     box-shadow: var(--bowshadow);
+     margin-bottom: 15px;
+     height: auto;
+    
+     
+ }
+
+ .ethics img {
+    border-bottom: 2px solid var(--secondary-color);
+    width: 300px;
+    border-radius: 8px 8px  0 0;
+}
+
+.ethics p {
+    padding: 10px;
+    align-self: flex-end;
+    text-align: center;
+    font-size: 16px;
+    word-wrap: wrap;
+    width: 300px;
+}
+
+.ethics-best-judo {
+    margin-top: 50px;
+    font-size: var(--size-title);
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.footer-site small,
+.footer-site strong {
+   font-size: var(--size-text);
+} 
+
+.watch-more {
+    font-size: 1.6em;
+}
+
+.watch-more a {
+    color: rgb(229, 66, 235);
+}
+
+.watch-more a:link {
+    color: rgb(229, 66, 235);
+}
